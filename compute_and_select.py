@@ -3,8 +3,6 @@ import random
 import generation
 def compute_performance(population,password):
     performance_list =[]
-   
-    
     for individual in population:
         score = fit.fitness(password,individual)
         if score >0:
