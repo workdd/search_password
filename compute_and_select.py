@@ -3,12 +3,13 @@ import random
 import generation
 def compute_performance(population,password):
     performance_list =[]
+   
     
     for individual in population:
         score = fit.fitness(password,individual)
         if score >0:
             predict_length = len(individual)
-
+            
         performance_list.append([individual,score])
 
     population_sorted = sorted(performance_list,key = lambda score:score[1],reverse=True)

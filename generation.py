@@ -1,7 +1,7 @@
 import string
 import random
 def new_word(length):
-    word = ''.join(random.sample(string.digits+string.ascii_letters,length))
+    word = ''.join(random.sample(string.digits+string.ascii_letters+string.punctuation+' ',length))
     return word
 
 
@@ -13,5 +13,3 @@ def generate_population(size,min_length,max_length):
 
         population.append(new_word(length))
     return population
-
-# print(re)

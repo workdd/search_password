@@ -6,10 +6,10 @@ def word_mutated(word):
     i = int(random.random()*len(word))
 
     if(i ==0):
-        word = random.choice(string.ascii_letters+string.digits)+word[1:]
+        word = random.choice(string.ascii_letters+string.digits+string.punctuation+' ')+word[1:]
 
     else:
-        word = word[:i]+random.choice(string.ascii_letters+string.digits)+word[i+1:]
+        word = word[:i]+random.choice(string.ascii_letters+string.digits+string.punctuation+' ')+word[i+1:]
     return word
 
 
